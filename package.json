@@ -1,0 +1,22 @@
+{
+  "name": "bible-bot",
+  "version": "1.0.0",
+  "description": "Bible bot for WhatsApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mizaelp/bible-bot.git"
+  },
+  "author": "mizael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mizaelp/bible-bot/issues"
+  },
+  "homepage": "https://github.com/mizaelp/bible-bot#readme",
+  "dependencies": {
+    "venom-bot": "^4.0.5"
+  }
+}
