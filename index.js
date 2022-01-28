@@ -14,14 +14,16 @@ venom
 function start(client) {
   client.onMessage((message) => {
 
-    const book = message.body.split(" ")[0]
-    const chapter = +message.body.split(" ")[1].split(":")[0]
-    const verse = +message.body.split(" ")[1].split(":")[1]
+    const text = message.body.split(/\s|:/, 3)
+    const book = text[0]
+    const chapter = (parseInt(text[1]) - 1)
+    const verse = (parseInt(text[2]) - 1)
+
     const filteredBook = bible.filter(eachBook => eachBook.name === book)
 
-    if (filteredBook[0].chapters[chapter - 1][verse - 1]) {
+    if (filteredBook[0].chapters[chapter][verse]) {
       client
-        .sendText(message.from, `Olá ${message.chat.contact.name}, o texto que você escolheu diz: ${filteredBook[0].chapters[chapter - 1][verse - 1]}`)
+        .sendText(message.from, `Olá ${message.sender.name}, o texto que você escolheu diz: ${filteredBook[0].chapters[chapter][verse]}`)
         .then((result) => {
           console.log('Result: ', result)
         })
