@@ -1,0 +1,25 @@
+{
+  "name": "whatsappbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mizaelp/whatsappbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mizaelp/whatsappbot/issues"
+  },
+  "homepage": "https://github.com/mizaelp/whatsappbot#readme",
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.4"
+  }
+}
